@@ -1,0 +1,140 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    height: 200vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px 5px 50px 10px;
+    border-bottom: 2px solid #333;
+    opacity: 1;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.nav-links li {
+    text-shadow: #555;
+    margin: 0 15px;
+}
+
+.nav-links li::hover {
+
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 1.8);
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+/* Container Styles */
+.container {
+    margin: 0 50px;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Card Styles */
+.card {
+    background: #ffffff;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: 0 7px 8px rgba(78, 59, 59, 0.3);
+    transition: transform 0.3s ease;
+    /* Smooth transition for scaling */
+}
+
+/* Card Image Styling */
+.card img {
+    width: 100%;
+    height: 150px;
+    background: rgba(255, 193, 7, 0.5);
+    border-radius: 25px;
+}
+
+/* Card Text */
+.card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card .price {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card button {
+    background: none;
+    border: 2px solid black;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.card button:hover {
+    background: black;
+    color: white;
+}
+
+/* Keyframe Animation for Zoom In and Out */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+        /* Original size */
+    }
+
+    50% {
+        transform: scale(1.3);
+        /* Zoom-in effect */
+    }
+
+    100% {
+        transform: scale(1.2);
+        /* Return to original size */
+    }
+}
+
+/* Hover Effect - Zoom In and Out */
+.card:hover {
+    animation: zoomInOut 0.8s ease-in-out forwards;
+    background: #efefd88a;
+    /* Optional background change on hover */
+}

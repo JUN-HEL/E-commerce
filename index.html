@@ -24,9 +24,31 @@
             <li><a href="#">Contact</a></li>
         </ul>
 
+        <!-- Notification Button -->
+        <button id="notificationButton">🔔 (<span id="notificationCount">0</span>)</button>
+
+        <!-- Cart Button -->
+        <button id="cartButton">🛒 Cart (<span id="cartCount">0</span>)</button>
     </nav>
 
+    <!-- Notification Modal -->
+    <div id="notificationModal" class="modal">
+        <div class="modal-content">
+            <span class="close close-notification">&times;</span>
+            <h2>Notifications</h2>
+            <ul id="notificationList"></ul>
+        </div>
+    </div>
 
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cartItems"></ul>
+            <p><strong>Total:</strong> <span id="cartTotal">$0</span></p>
+        </div>
+    </div>
 
     <main>
         <div class="container">
@@ -35,6 +57,7 @@
                 <h2>Smart Watch <span class="price">$55</span></h2>
                 <p>Black</p>
                 <button>Add to cart</button>
+                <button>Buy</button>
             </div>
             <div class="card">
                 <img src="https://picsum.photos/150" alt="Wireless Headphones">
@@ -122,6 +145,7 @@
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

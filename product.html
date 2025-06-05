@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .image-section img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .details-section {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        .rating {
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #e74c3c;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .discount {
+            font-weight: bold;
+            color: #d35400;
+        }
+
+        .stock {
+            color: green;
+            font-weight: bold;
+        }
+
+        .cart-btn,
+        .buy-btn {
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .cart-btn {
+            background-color: #f1c40f;
+        }
+
+        .buy-btn {
+            background-color: #e67e22;
+        }
+
+        .description {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="image-section">
+                <img id="productImage" src="" alt="Product Image">
+            </div>
+            <div class="details-section">
+                <h1 id="productName"></h1>
+                <p class="rating">⭐ 4.2 (6,317 ratings) | #1 Best Seller</p>
+                <p class="price"> <span class="discount">-20%</span> <span id="productPrice"></span></p>
+                <p class="stock">In Stock</p>
+                <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+                <p class="description" id="productDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve product details from URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("productName").innerText = urlParams.get("name");
+        document.getElementById("productPrice").innerText = urlParams.get("price");
+        document.getElementById("productImage").src = urlParams.get("image");
+        document.getElementById("productDescription").innerText = urlParams.get("description");
+
+        function addToCart() {
+            alert("Added to cart: " + urlParams.get("name"));
+        }
+    </script>
+</body>
+
+</html>

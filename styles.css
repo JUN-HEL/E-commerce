@@ -38,19 +38,146 @@ body {
     text-shadow: #555;
     margin: 0 15px;
 }
+
 .nav-links a:hover {
-    text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8); /* Stronger shadow on hover */
+    text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8);
+    /* Stronger shadow on hover */
 }
 
 .nav-links a {
     color: black;
     text-decoration: none;
     font-size: 18px;
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 1.8);;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 1.8);
+    ;
 }
 
 h1 {
     font-size: 32px;
+}
+
+#cartButton {
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#cartItems {
+    list-style: none;
+    padding: 0;
+    border: 1px solid black;
+    border-bottom: 1px solid white;
+
+
+}
+
+#cartItems li {
+    margin: 5px 0;
+    box-sizing: 0px 0px 0px 1px rgb(190, 76, 95);
+    padding: 5px;
+    border-bottom: 1px solid #d87676;
+}
+
+/* Notification & Cart Button */
+#notificationButton,
+#cartButton {
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px 4px;
+
+}
+
+/* Notification Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 254, 231, 0.5);
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    height: 500px;
+    width: 350px;
+    /* box-shadow: 0px 0px 0px 0px black;  */
+    box-sizing: border-box;
+    border: 2px solid black;
+    opacity: 1.2;
+    background-color: color(from white srgb r g b);
+    
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+#notificationList {
+    list-style: none;
+    padding: 0;
+    box-shadow: bisque;
+    box-shadow: 0px 0px 0px 1px pink;
+    
+}
+
+#notificationList li {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    background-color: antiquewhite;
+    color: black;
 }
 
 /* Container Styles */
@@ -137,3 +264,10 @@ h1 {
     background: #efefd88a;
     /* Optional background change on hover */
 }
+/* #notificationModal,.model{
+    margin: auto;
+    padding: 10px 20px 50px 75px;
+    background-color: #ff9800;
+    height: 100px;
+    width: 65px;
+} */
